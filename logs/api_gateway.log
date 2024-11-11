@@ -1,0 +1,63 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:46:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:46:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py", line 13, in decorated_function
+    ip = request.remote_addr
+         ^^^^^^^
+NameError: name 'request' is not defined
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:47:22] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py", line 13, in decorated_function
+    ip = request.remote_addr
+         ^^^^^^^
+NameError: name 'request' is not defined
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:47:33] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:53:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:root:/login request from 127.0.0.1 took 0.04s with status 200
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:53:41] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:55:20] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:/login request from 127.0.0.1 took 0.02s with status 200
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:56:01] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 13:56:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'start_time': 1731362496.8812091, 'end_time': 1731362496.903577, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 14:01:36] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 14:01:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 14:01:48] "GET / HTTP/1.1" 200 -

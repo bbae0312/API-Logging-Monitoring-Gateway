@@ -1,4 +1,4 @@
-from flask import jsonify
+from flask import request, jsonify
 from functools import wraps
 from time import time
 
@@ -10,21 +10,22 @@ TIME_WINDOW = 60  # Time window in seconds
 def rate_limiter(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        ip = request.remote_addr
+        ip = request.remote_addr  # Get the IP address of the request
         current_time = time()
         
-        # Initialize request tracking
+        # Initialize request tracking for new IP addresses
         if ip not in user_requests:
             user_requests[ip] = []
         
-        # Filter out old requests
+        # Remove outdated requests outside of the TIME_WINDOW
         user_requests[ip] = [req for req in user_requests[ip] if current_time - req < TIME_WINDOW]
         
-        # Check rate limit
+        # Check if the request count exceeds the limit
         if len(user_requests[ip]) >= MAX_REQUESTS:
             return jsonify({"error": "Rate limit exceeded"}), 429
         
-        # Log new request and proceed
+        # Log the current request timestamp and proceed
         user_requests[ip].append(current_time)
         return f(*args, **kwargs)
+    
     return decorated_function
