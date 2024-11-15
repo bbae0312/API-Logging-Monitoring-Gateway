@@ -1622,3 +1622,121 @@ INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'
 INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:43] "POST /login HTTP/1.1" 200 -
 INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3ODg0fQ.CNwT9D4n2afc2gUIN3Ig22GVkv3tVdHgUDLCtOZDS48'}, 'duration': '0.26s'}
 INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:44] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTQ5fQ.npIjTGAXtmQBVhQhQrY9ilqjyAN86BncKFrrVDnHLjA'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTUwfQ.9L03olqqqvRheNHhfdOCHnLtEhkbPybprRscZHXJkCQ'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTUxfQ.OkBr2O6ZBasj4oxC11myR-xx35mb0_hpJWHHau0ZjG4'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU0fQ.1FjYTNf1r1qJ7diCYQ9lrjzpYSrm-PxZLrB5Hm0Wh_o'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:14] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU1fQ.S5CqW1vLjGL4IRIxpjY5UCZsvSKW0sZ5u7ztOOJ1oKk'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU2fQ.iCcrq0H5fv_9lhSqg1rjR0qOKoaPUKHq7-m7p9eG0ek'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:16] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU3fQ.kxVdroWKgtLxO84y9wOy9pKWypjMO3-tMzvodg1EEIM'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU3fQ.kxVdroWKgtLxO84y9wOy9pKWypjMO3-tMzvodg1EEIM'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU4fQ.u2Qp-y3POZnmPlbzreNY6rGFlfEk50OvmbfuqwlOl2c'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTU5fQ.2DMmZgx7tKfEPiWK6YKgaTGuyVvKDR4q8-tPlZchH0M'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:19] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg2fQ.KxAdB7vNQ4Dtgym-BjnD8MrDXUPSu18GfuNebW2nzTM'}, 'duration': '0.27s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg2fQ.KxAdB7vNQ4Dtgym-BjnD8MrDXUPSu18GfuNebW2nzTM'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg2fQ.KxAdB7vNQ4Dtgym-BjnD8MrDXUPSu18GfuNebW2nzTM'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg2fQ.KxAdB7vNQ4Dtgym-BjnD8MrDXUPSu18GfuNebW2nzTM'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg3fQ.AAB3gvpK2dhIUVqgO_Z6iTikCAy4SRsbq_a4J6rbDos'}, 'duration': '0.24s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg3fQ.AAB3gvpK2dhIUVqgO_Z6iTikCAy4SRsbq_a4J6rbDos'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg3fQ.AAB3gvpK2dhIUVqgO_Z6iTikCAy4SRsbq_a4J6rbDos'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg3fQ.AAB3gvpK2dhIUVqgO_Z6iTikCAy4SRsbq_a4J6rbDos'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg3fQ.AAB3gvpK2dhIUVqgO_Z6iTikCAy4SRsbq_a4J6rbDos'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNTg4fQ.eYVpHp1fQj1kbWZOXZQc8JlYIAwuiOF8a0Y5cUMQleE'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:49:48] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:51:29] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM2fQ.40U7u48TSXb7QqpJ7QcBKoHloQA0vvGdo5lzHrCtTvQ'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:16] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM2fQ.40U7u48TSXb7QqpJ7QcBKoHloQA0vvGdo5lzHrCtTvQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:16] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM2fQ.40U7u48TSXb7QqpJ7QcBKoHloQA0vvGdo5lzHrCtTvQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:16] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM2fQ.40U7u48TSXb7QqpJ7QcBKoHloQA0vvGdo5lzHrCtTvQ'}, 'duration': '0.24s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:16] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM3fQ.DE-NZ6fOgLrveiLCvW3z8_TgwKrMtSLIUYwpfgbQjbs'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM3fQ.DE-NZ6fOgLrveiLCvW3z8_TgwKrMtSLIUYwpfgbQjbs'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM3fQ.DE-NZ6fOgLrveiLCvW3z8_TgwKrMtSLIUYwpfgbQjbs'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM3fQ.DE-NZ6fOgLrveiLCvW3z8_TgwKrMtSLIUYwpfgbQjbs'}, 'duration': '0.23s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:17] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM4fQ.AU_14PyN4_60mUvDDOnXV6Xd8LpHyyvjGEbzbOssxmQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM4fQ.AU_14PyN4_60mUvDDOnXV6Xd8LpHyyvjGEbzbOssxmQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM4fQ.AU_14PyN4_60mUvDDOnXV6Xd8LpHyyvjGEbzbOssxmQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM4fQ.AU_14PyN4_60mUvDDOnXV6Xd8LpHyyvjGEbzbOssxmQ'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM4fQ.AU_14PyN4_60mUvDDOnXV6Xd8LpHyyvjGEbzbOssxmQ'}, 'duration': '0.23s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:18] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM5fQ.7bxK4xD66G-urC-e6TzkYVd6MlPtjCkkKprKqSjdtMc'}, 'duration': '0.23s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:19] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM5fQ.7bxK4xD66G-urC-e6TzkYVd6MlPtjCkkKprKqSjdtMc'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:19] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM5fQ.7bxK4xD66G-urC-e6TzkYVd6MlPtjCkkKprKqSjdtMc'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:19] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzM5fQ.7bxK4xD66G-urC-e6TzkYVd6MlPtjCkkKprKqSjdtMc'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:19] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzQwfQ.xD7AJ28B-MtZM80DRWRG8HKmioIKyyMWeR-UJ883UjU'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzQwfQ.xD7AJ28B-MtZM80DRWRG8HKmioIKyyMWeR-UJ883UjU'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjYwNzQwfQ.xD7AJ28B-MtZM80DRWRG8HKmioIKyyMWeR-UJ883UjU'}, 'duration': '0.22s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 23:52:31] "POST /reset_rate_limit HTTP/1.1" 200 -
