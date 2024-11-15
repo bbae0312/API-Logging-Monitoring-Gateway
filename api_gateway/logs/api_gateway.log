@@ -1,0 +1,1624 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:Processing login request...
+ERROR:root:Failed to connect to user service: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 15:48:10] "[35m[1mPOST /login HTTP/1.1[0m" 503 -
+INFO:root:Processing login request...
+ERROR:root:Failed to connect to user service: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 15:50:19] "[35m[1mPOST /login HTTP/1.1[0m" 503 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 15:50:36] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 15:50:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:Processing login request...
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'start_time': 1731455815.083873, 'end_time': 1731455815.11044, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 15:56:55] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/order_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/order_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/order_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/order_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:03:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:27:07] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a coroutine.
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:27:39] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:30:19] "GET / HTTP/1.1" 200 -
+ERROR:app:Exception on /login [POST]
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/flask/app.py", line 1211, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, list, tuple with headers or status, Response instance, or WSGI callable, but it was a coroutine.
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:31:37] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:33:15] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:35:38] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/priority/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/priority/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/priority/priority.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/priority/priority.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/flags.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/flags.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/frame.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hyperframe/frame.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/hpack.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/hpack.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman_constants.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman_constants.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman_table.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/huffman_table.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/struct.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/struct.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/table.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hpack/table.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_abnf.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_abnf.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_headers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_headers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_readers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_readers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_receivebuffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_receivebuffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_state.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_state.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_util.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_util.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_version.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_version.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_writers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/_writers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_against_stdlib_http.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_against_stdlib_http.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_headers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_headers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_io.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_io.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_receivebuffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_receivebuffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_state.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_state.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_util.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h11/tests/test_util.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/base.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/base.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/os.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/os.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/ospath.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/ospath.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/tempfile/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/tempfile/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/tempfile/temptypes.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/tempfile/temptypes.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/binary.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/binary.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/text.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/text.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/aiofiles/threadpool/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/extensions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/extensions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/frame_protocol.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/frame_protocol.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/handshake.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/handshake.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/utilities.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/wsproto/utilities.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/connection.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/errors.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/errors.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/exceptions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/frame_buffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/frame_buffer.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/settings.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/settings.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/utilities.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/utilities.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/windows.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/h2/windows.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/__main__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/__main__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/app_wrappers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/app_wrappers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/lifespan.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/lifespan.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/task_group.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/task_group.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/tcp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/tcp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/udp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/udp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/worker_context.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/asyncio/worker_context.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/logging.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/logging.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/dispatcher.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/dispatcher.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/http_to_https.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/http_to_https.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/proxy_fix.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/proxy_fix.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/wsgi.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/middleware/wsgi.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/events.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h11.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h11.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h2.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h2.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h3.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/h3.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/http_stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/http_stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/quic.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/quic.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/ws_stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/protocol/ws_stream.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/lifespan.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/lifespan.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/run.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/statsd.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/task_group.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/task_group.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/tcp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/tcp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/udp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/udp_server.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/worker_context.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/trio/worker_context.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/hypercorn/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/__main__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/__main__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/app.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/app.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/asgi.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/asgi.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/blueprints.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/blueprints.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/cli.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/cli.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/config.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/ctx.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/ctx.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/datastructures.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/datastructures.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/debug.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/debug.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/formparser.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/formparser.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/globals.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/globals.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/helpers.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/provider.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/provider.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/tag.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/json/tag.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/logging.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/logging.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/routing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/routing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/sessions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/sessions.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/signals.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/signals.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/templating.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/templating.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/app.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/app.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/client.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/client.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/connections.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/connections.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/testing/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/typing.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/utils.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/views.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/views.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/__init__.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/base.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/base.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/request.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/request.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/response.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/response.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/websocket.py', reloading
+INFO:werkzeug: * Detected change in '/opt/anaconda3/lib/python3.12/site-packages/quart/wrappers/websocket.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+INFO:hypercorn.error:Running on http://127.0.0.1:5000 (CTRL + C to quit)
+ERROR:app:Exception on request POST /login
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1441, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1029, in handle_user_exception
+    raise error
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1439, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1535, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/utils.py", line 57, in _wrapper
+    result = await loop.run_in_executor(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py", line 17, in decorated_function
+    client_ip = request.remote_addr
+                ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+ERROR:app:Exception on request POST /login
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1403, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1441, in full_dispatch_request
+    result = await self.handle_user_exception(error)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1029, in handle_user_exception
+    raise error
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1439, in full_dispatch_request
+    result = await self.dispatch_request(request_context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/app.py", line 1535, in dispatch_request
+    return await self.ensure_async(handler)(**request_.view_args)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/quart/utils.py", line 57, in _wrapper
+    result = await loop.run_in_executor(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py", line 17, in decorated_function
+    client_ip = request.remote_addr
+                ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/werkzeug/local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:42:34] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:57:52] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:24] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:35] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:37] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:37] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:38] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:39] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:39] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:40] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:40] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:41] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:41] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:42] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:42] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:43] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:43] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:44] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 17:59:44] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:04:43] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:15:49] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:50] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:16:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:17:55] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:11] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:15] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:21] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:30] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:21:31] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:12] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:21] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:22:27] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:49] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:24:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:25:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:36] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:53] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:27:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:20] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:29:42] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:34] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:34] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:34] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:34] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:34] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:33:39] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:34:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:04] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:35:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:03] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:20] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:26] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.04s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:32] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:33] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:54] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:58] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:38:59] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:05] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.00s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:09] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'your_authorization_token'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 18:39:10] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 19:22:31] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNTYxMzg5fQ.dQiMMaBEv8MEFUzI1aelQBIX7xC0ABWAX6syvapM-VE'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:29] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:16:44] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:22:56] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:23:16] "[33mGET /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:25:19] "[33mGET /status HTTP/1.1[0m" 404 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNTYxOTM0fQ.8c9ZzUmI38Vi567dPWxwTrYGbl4rnKwCJRZcgpDTJNU'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:25:34] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:14] "[33mGET /status HTTP/1.1[0m" 404 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.03s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.02s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:54] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'user'}, 'response_status': 401, 'response_payload': {'error': 'Invalid credentials'}, 'duration': '0.01s'}
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:26:55] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:02] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:28:52] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:29:27] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Nov/2024 20:29:39] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:02:02] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:15] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:15] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:15:37] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjIyNTY3fQ.zQzHd9c8N3brHwG1ltQ6uazXp4iHnDDlCjw_Y0XVW7A'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:07] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:13] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:13] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:13] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:13] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:14] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:16:29] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:17] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:18] "[33mPOST /status HTTP/1.1[0m" 404 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjIyNjQ4fQ.4Ev5u4Kc0_ZFlvu991aMXrJ34t8Osjc5GnyxdvmROa0'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:17:28] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 13:48:23] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/bb/Documents/GitHub/API-Logging-Monitoring-Gateway/api_gateway/utils/rate_limit.py', reloading
+INFO:werkzeug: * Restarting with watchdog (fsevents)
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 726-023-953
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI2NTYxfQ.Ju36HsqCPxw_q2GDMFTl_TKbVkPoYZhPtGN0a3uoozU'}, 'duration': '0.29s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:22:41] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:26:52] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MDk4fQ.vUDMH2pul11UXA6NiApf9sxO8i8QuPdBz1OCnV-epL0'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:38] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTAwfQ.phPCEghd6xW14t4Ymcsv2znE63ly0dE7mzscPU8HJ5w'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:40] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTAxfQ.pJRd4YuHa3zcDm6JaAuIX2t66WKwEnim904ihmYdrlc'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:41] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTAyfQ.hRm9qpZHB5jjTX4OkEe7nxFNJCeAsjxRjKVPefrEY30'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:42] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTAzfQ.SnCD00o-pU54uAYljC7QWTD4_WEsk8OuUcKfsy-Um7w'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:43] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA0fQ.0wCGR89xaGGy-ObeM5bJY7Qz_Q5x08ts4W_dirCWejQ'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:44] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA0fQ.0wCGR89xaGGy-ObeM5bJY7Qz_Q5x08ts4W_dirCWejQ'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:44] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA1fQ.yQbIBvJ-n-Zb3zoiCtKALdrlgMiQPLTr5wgCSw9voxo'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:45] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA2fQ.bcCC2dd3ASNNNhK7xpzR8ziVDneTrRIo_JrEZeqcEu8'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA2fQ.bcCC2dd3ASNNNhK7xpzR8ziVDneTrRIo_JrEZeqcEu8'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:46] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA3fQ.boG5Tt8Hk43NUVVp-fZ46T-pNUSaKILVnLYI_LNV8ss'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA3fQ.boG5Tt8Hk43NUVVp-fZ46T-pNUSaKILVnLYI_LNV8ss'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:47] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA4fQ.vPxWo0X-NFbhj1qH-WmK-e87Dznb7WfXOdVZofUM3cE'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:48] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA5fQ.9XzQqhUSaelDonSoWUaZsgGE4SIr3kZ_Euv1IaaTAo4'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTA5fQ.9XzQqhUSaelDonSoWUaZsgGE4SIr3kZ_Euv1IaaTAo4'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:49] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTEwfQ.KEb93wyZouoPuLxCTNDvBU7hEyqfMu2yVs6i1UUBwNU'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:50] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTExfQ._07niH2-cL156BN_A-Ri_oyOQ_lOf_f_C4E9ThIbiXs'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:51] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTEyfQ.uCw2OCCOjTAb29VIbEgltRCNCu9jqGj6km8RSO2i8ls'}, 'duration': '0.25s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:52] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTEyfQ.uCw2OCCOjTAb29VIbEgltRCNCu9jqGj6km8RSO2i8ls'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:52] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTEzfQ.N1GAB0otOI4CqtUtMtLNffWybVZS4elVuBiw3bI50js'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:53] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:31:54] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:32:35] "[31m[1mPOST /login HTTP/1.1[0m" 429 -
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:32:42] "POST /reset_rate_limit HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3MTcxfQ.S55q_c2-X7pVLim6lHgGs5dvhBH3kBDA71qiqA-pV_g'}, 'duration': '0.28s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:32:51] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3NzU2fQ.8iyk6QxiYaW-6fRxlyBr23J7mDAeljybsb7qoOZy-fc'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:42:36] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3NzU4fQ.y3W1g-MmIXmfg3Uyds4P8HeM-Fg-H1mAh-cCfx80-0U'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:42:38] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3NzU5fQ.sQrzPoqrBOOqVHtDY34UWLLUnjxTXBHzlQ61qMtv-u0'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:42:39] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3ODgxfQ.jUlw4buWANGqGUTmHpeFYDDTkHI772s3cHU8NHQh09s'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:41] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3ODgyfQ.f3y3h0gbjor1gXydOpnTVKWNxeGl25B7LXWDP78r_2Q'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:42] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3ODgzfQ._dGlAkw4SvSOfKXx-M_BRSHnCaZitJQeLpwdr-6MPz8'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:43] "POST /login HTTP/1.1" 200 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjI3ODg0fQ.CNwT9D4n2afc2gUIN3Ig22GVkv3tVdHgUDLCtOZDS48'}, 'duration': '0.26s'}
+INFO:werkzeug:127.0.0.1 - - [14/Nov/2024 14:44:44] "POST /login HTTP/1.1" 200 -
