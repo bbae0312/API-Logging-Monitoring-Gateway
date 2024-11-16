@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, request, jsonify
 import time
 import logging
@@ -132,4 +133,10 @@ def reset_rate_limit():
     return jsonify({"message": "Rate limit reset for this IP"}), 200
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    port = 5000
+    if len(sys.argv) > 1:
+        try:
+            port = int(sys.argv[1])
+        except:
+            print("Error: Invalid Port Number, using default port 5000")
+    app.run(port=port, debug=True)
