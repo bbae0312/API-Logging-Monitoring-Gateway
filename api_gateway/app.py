@@ -81,47 +81,75 @@ def login():
         logging.error(f"Error in login: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to order service (for orders)
-@app.route('/orders', methods=['GET', 'POST'])
-@authenticate_request  # Authentication
-@rate_limiter  # Rate limiting with Redis
-def orders():
+# Gateway route to user service (for adding a user)
+@app.route('/add_user', methods=['POST'])
+def add_user():
     try:
-        if not authorize_request(request.headers.get("Authorization")):
-            return jsonify({"error": "Unauthorized"}), 403
-
-        start_time = time.time()
-        
-        # Route based on request method
-        if request.method == 'POST':
-            response = requests.post(f"{ORDER_SERVICE_URL}/orders", json=request.json)
-        elif request.method == 'GET' and 'order_id' in request.args:
-            response = requests.get(f"{ORDER_SERVICE_URL}/orders/{request.args.get('order_id')}")
-        else:
-            response = requests.get(f"{ORDER_SERVICE_URL}/orders")
-
+        request_payload = request.json
+        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=request_payload)
         response_data = response.json()
-        response_status = response.status_code
-
-        # Transform response if `Client-Type` is `MobileApp`
-        if request.headers.get("Client-Type") == "MobileApp":
-            response_data = transform_order_response(response_data)
-
-        # Log request and response details
-        response_time = time.time() - start_time
-        logging.info({
-            "endpoint": "/orders",
-            "client_ip": request.remote_addr,
-            "request_method": request.method,
-            "request_args": request.args,
-            "response_status": response_status,
-            "response_payload": response_data,
-            "duration": f"{response_time:.2f}s"
-        })
-
-        return jsonify(response_data), response_status
+        return jsonify(response_data), response.status_code
     except Exception as e:
-        logging.error(f"Error in orders: {e}")
+        logging.error(f"Error in adding user: {e}")
+        return jsonify({"error": "Service Unavailable"}), 503
+
+# Gateway route to user service (for deleting a user)
+@app.route('/delete_user', methods=['DELETE'])
+def delete_user():
+    try:
+        request_payload = request.json
+        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=request_payload)
+        response_data = response.json()
+        return jsonify(response_data), response.status_code
+    except Exception as e:
+        logging.error(f"Error in deleting user: {e}")
+        return jsonify({"error": "Service Unavailable"}), 503
+
+# Gateway route to document service (for creating a document)
+@app.route('/documents', methods=['POST'])
+def create_document():
+    try:
+        request_payload = request.json
+        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=request_payload)
+        response_data = response.json()
+        return jsonify(response_data), response.status_code
+    except Exception as e:
+        logging.error(f"Error in creating document: {e}")
+        return jsonify({"error": "Service Unavailable"}), 503
+
+# Gateway route to document service (for getting a document)
+@app.route('/documents/<document_id>', methods=['GET'])
+def get_document(document_id):
+    try:
+        response = requests.get(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request.json)
+        response_data = response.json()
+        return jsonify(response_data), response.status_code
+    except Exception as e:
+        logging.error(f"Error in retrieving document: {e}")
+        return jsonify({"error": "Service Unavailable"}), 503
+
+# Gateway route to document service (for updating a document)
+@app.route('/documents/<document_id>', methods=['PUT'])
+def update_document(document_id):
+    try:
+        request_payload = request.json
+        response = requests.put(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request_payload)
+        response_data = response.json()
+        return jsonify(response_data), response.status_code
+    except Exception as e:
+        logging.error(f"Error in updating document: {e}")
+        return jsonify({"error": "Service Unavailable"}), 503
+
+# Gateway route to document service (for deleting a document)
+@app.route('/documents/<document_id>', methods=['DELETE'])
+def delete_document(document_id):
+    try:
+        request_payload = request.json
+        response = requests.delete(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request_payload)
+        response_data = response.json()
+        return jsonify(response_data), response.status_code
+    except Exception as e:
+        logging.error(f"Error in deleting document: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
 # Route to reset the rate limit for the current client IP

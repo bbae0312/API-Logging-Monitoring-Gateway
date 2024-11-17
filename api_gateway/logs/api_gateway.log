@@ -1837,3 +1837,97 @@ INFO:werkzeug: * Debugger PIN: 100-300-102
 INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 14:10:14] "[33mPOST /add_user HTTP/1.1[0m" 404 -
 INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNzk4Nzc3fQ.BUA5fwJKXJoWweieUjMteHwMGAfTdsY9ny-Hu5funSc'}, 'duration': '0.35s'}
 INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 14:12:57] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 14:17:25] "[33mPOST /documents HTTP/1.1[0m" 404 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNzk5MDU2fQ.nhJMQ47UyxfP4Cpf4BCMBuSktj8X3qjhVniLX2XuqN0'}, 'duration': '0.33s'}
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 14:17:36] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4999
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4998
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'request_payload': {'username': 'testuser'}, 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxODAxNzcwfQ.sO-nvsr7rc8RDXHqBsR2FwSxQwHskko6xXdZwYNnTN0'}, 'duration': '0.33s'}
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 15:02:50] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 15:03:14] "[33mPOST /add_user HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4998
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4999
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug: * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4998
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4999
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 19:13:51] "[33mPOST /add_user HTTP/1.1[0m" 404 -
+INFO:root:{'endpoint': '/login', 'client_ip': '127.0.0.1', 'response_status': 200, 'response_payload': {'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxODE2ODQ1fQ.yPgTbSL21dArTXU89FFs97vP4Ow0DxR0RXnqMaW-xk8'}, 'duration': '0.33s'}
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 19:14:05] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 19:14:21] "[33mPOST /add_user HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 19:14:53] "[33mPOST /add_user HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4999
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4998
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 989-386-005
+INFO:werkzeug:127.0.0.1 - - [16/Nov/2024 19:15:48] "[35m[1mPOST /add_user HTTP/1.1[0m" 201 -
