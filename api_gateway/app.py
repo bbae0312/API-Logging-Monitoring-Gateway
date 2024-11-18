@@ -1,17 +1,21 @@
 import sys
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, g
 import time
 import logging
 import requests
 import redis
-from utils.auth import authenticate_request, authorize_request
+from utils.auth import authenticate_request
 from utils.rate_limit import rate_limiter
 from config import USER_SERVICE_URL, DOCUMENT_SERVICE_URL, LOG_FILE_PATH
 
 app = Flask(__name__)
 
 # Initialize logging with configuration from LOG_FILE_PATH
-logging.basicConfig(filename=LOG_FILE_PATH, level=logging.INFO)
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 # Initialize Redis connection
 try:
@@ -21,22 +25,40 @@ try:
 except redis.ConnectionError:
     print("Failed to connect to Redis. Please ensure Redis is running on localhost:6379.")
 
+# Log request and response details
+@app.before_request
+def log_request_info():
+    g.start_time = time.time()  # Track start time
+    logging.info(
+        {
+            "event": "Incoming Request",
+            "endpoint": request.path,
+            "method": request.method,
+            "client_ip": request.remote_addr,
+            "headers": dict(request.headers),
+            "body": request.json,
+        }
+    )
+
+@app.after_request
+def log_response_info(response):
+    duration = time.time() - g.start_time
+    logging.info(
+        {
+            "event": "Outgoing Response",
+            "endpoint": request.path,
+            "method": request.method,
+            "status_code": response.status_code,
+            "duration": f"{duration:.2f}s",
+        }
+    )
+    return response
+
 # Helper function for request validation
 def validate_login_request(data):
     if "username" not in data or "password" not in data:
         return False, {"error": "Missing username or password"}
     return True, None
-
-# Helper function for response transformation
-def transform_order_response(data):
-    return [
-        {
-            "order_id": order.get("order_id"),
-            "user": order.get("user"),
-            "items": order.get("items")
-        }
-        for order in data.get("orders", [])
-    ]
 
 # Default route for root URL
 @app.route('/')
@@ -45,114 +67,73 @@ def index():
 
 # Gateway route to user service (for login)
 @app.route('/login', methods=['POST'])
-@rate_limiter  # Rate limiting with Redis
+@rate_limiter
 def login():
     try:
-        start_time = time.time()
         request_payload = request.json
 
         # Validate request payload
         is_valid, error_response = validate_login_request(request_payload)
         if not is_valid:
-            logging.info(f"Invalid login request from {request.remote_addr}")
-            return jsonify(error_response), 400  # Bad Request
+            logging.warning(f"Invalid login request from {request.remote_addr}")
+            return jsonify(error_response), 400
 
-        # Redact sensitive information in the logs
-        log_payload = {k: v for k, v in request_payload.items() if k != "password"}
-
-        # Forward the request to user service synchronously
+        # Forward request to user service
         response = requests.post(f"{USER_SERVICE_URL}/login", json=request_payload)
-        response_data = response.json()
-        response_status = response.status_code
-
-        # Log request and response details
-        response_time = time.time() - start_time
-        logging.info({
-            "endpoint": "/login",
-            "client_ip": request.remote_addr,
-            "request_payload": log_payload,
-            "response_status": response_status,
-            "response_payload": response_data,
-            "duration": f"{response_time:.2f}s"
-        })
-
-        return jsonify(response_data), response_status
+        return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in login: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
 # Gateway route to user service (for adding a user)
 @app.route('/add_user', methods=['POST'])
+@rate_limiter
 def add_user():
     try:
-        request_payload = request.json
-        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=request_payload)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
+        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=request.json)
+        return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in adding user: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to user service (for deleting a user)
+# Other routes
 @app.route('/delete_user', methods=['DELETE'])
+@rate_limiter
 def delete_user():
     try:
-        request_payload = request.json
-        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=request_payload)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
+        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=request.json)
+        return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in deleting user: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to document service (for creating a document)
 @app.route('/documents', methods=['POST'])
+@rate_limiter
 def create_document():
     try:
-        request_payload = request.json
-        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=request_payload)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
+        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=request.json)
+        return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in creating document: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to document service (for getting a document)
-@app.route('/documents/<document_id>', methods=['GET'])
-def get_document(document_id):
+@app.route('/documents/<document_id>', methods=['GET', 'PUT', 'DELETE'])
+@rate_limiter
+def manage_document(document_id):
     try:
-        response = requests.get(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request.json)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
+        method_map = {
+            "GET": requests.get,
+            "PUT": requests.put,
+            "DELETE": requests.delete,
+        }
+        response = method_map[request.method](
+            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request.json
+        )
+        return jsonify(response.json()), response.status_code
     except Exception as e:
-        logging.error(f"Error in retrieving document: {e}")
+        logging.error(f"Error in managing document {document_id}: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to document service (for updating a document)
-@app.route('/documents/<document_id>', methods=['PUT'])
-def update_document(document_id):
-    try:
-        request_payload = request.json
-        response = requests.put(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request_payload)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
-    except Exception as e:
-        logging.error(f"Error in updating document: {e}")
-        return jsonify({"error": "Service Unavailable"}), 503
-
-# Gateway route to document service (for deleting a document)
-@app.route('/documents/<document_id>', methods=['DELETE'])
-def delete_document(document_id):
-    try:
-        request_payload = request.json
-        response = requests.delete(f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request_payload)
-        response_data = response.json()
-        return jsonify(response_data), response.status_code
-    except Exception as e:
-        logging.error(f"Error in deleting document: {e}")
-        return jsonify({"error": "Service Unavailable"}), 503
-
-# Route to reset the rate limit for the current client IP
 @app.route('/reset_rate_limit', methods=['POST'])
 def reset_rate_limit():
     client_ip = request.remote_addr
@@ -165,6 +146,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         try:
             port = int(sys.argv[1])
-        except:
-            print("Error: Invalid Port Number, using default port 5000")
+        except ValueError:
+            print("Invalid port number, using default port 5000.")
     app.run(port=port, debug=True)

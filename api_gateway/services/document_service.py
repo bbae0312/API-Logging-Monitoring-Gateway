@@ -22,15 +22,19 @@ def create_document():
 
 @app.route('/documents/<document_id>', methods=['GET'])
 def get_document(document_id):
+    # Get the user_id from the query parameters
+    user_id = request.args.get('user_id')  # Get user_id from the query string
+
     document = documents_collection.find_one({"_id": ObjectId(document_id)})
     if document:
         # Check if the document is public or belongs to the requesting user
-        if document.get("is_public") or document.get("user_id") == request.json.get("user_id"):
+        if document.get("is_public") or document.get("user_id") == user_id:
             document["_id"] = str(document["_id"])  # Convert ObjectId to string for JSON response
             return jsonify(document), 200
         else:
             return jsonify({"error": "Unauthorized access to private document"}), 403
     return jsonify({"error": "Document not found"}), 404
+
 
 @app.route('/documents/<document_id>', methods=['PUT'])
 def update_document(document_id):

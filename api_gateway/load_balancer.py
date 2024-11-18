@@ -25,7 +25,7 @@ def load_balancer(path):
             json=request.get_json(),
             params=request.args,
         )
-
+        print(response)
         # Return the response from the instance
         return (response.content, response.status_code, response.headers.items())
     except requests.exceptions.RequestException as e:
