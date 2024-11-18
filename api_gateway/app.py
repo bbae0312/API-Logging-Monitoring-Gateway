@@ -4,13 +4,14 @@ import time
 import logging
 import requests
 import redis
+import os
 from utils.auth import authenticate_request
 from utils.rate_limit import rate_limiter
 from config import USER_SERVICE_URL, DOCUMENT_SERVICE_URL, LOG_FILE_PATH
 
 app = Flask(__name__)
 
-# Initialize logging with configuration from LOG_FILE_PATH
+# Initialize logging
 logging.basicConfig(
     filename=LOG_FILE_PATH,
     level=logging.INFO,
@@ -23,12 +24,20 @@ try:
     r.ping()
     print("Connected to Redis successfully!")
 except redis.ConnectionError:
-    print("Failed to connect to Redis. Please ensure Redis is running on localhost:6379.")
+    logging.error("Failed to connect to Redis. Ensure Redis is running on localhost:6379.")
+    r = None  # Fallback if Redis is unavailable
 
-# Log request and response details
+# Helper function: sanitize sensitive fields
+def sanitize_request_body(body):
+    if body and "password" in body:
+        body["password"] = "********"  # Mask the password
+    return body
+
+# Log request details
 @app.before_request
 def log_request_info():
     g.start_time = time.time()  # Track start time
+    sanitized_body = sanitize_request_body(request.json)
     logging.info(
         {
             "event": "Incoming Request",
@@ -36,7 +45,7 @@ def log_request_info():
             "method": request.method,
             "client_ip": request.remote_addr,
             "headers": dict(request.headers),
-            "body": request.json,
+            "body": sanitized_body,
         }
     )
 
@@ -54,26 +63,25 @@ def log_response_info(response):
     )
     return response
 
-# Helper function for request validation
-def validate_login_request(data):
-    if "username" not in data or "password" not in data:
-        return False, {"error": "Missing username or password"}
+# Helper function: validate request payload
+def validate_fields(data, required_fields):
+    missing_fields = [field for field in required_fields if field not in data]
+    if missing_fields:
+        return False, {"error": f"Missing fields: {', '.join(missing_fields)}"}
     return True, None
 
-# Default route for root URL
+# Default route
 @app.route('/')
 def index():
     return jsonify({"message": "API Gateway is running"}), 200
 
-# Gateway route to user service (for login)
+# Gateway route: login
 @app.route('/login', methods=['POST'])
 @rate_limiter
 def login():
     try:
         request_payload = request.json
-
-        # Validate request payload
-        is_valid, error_response = validate_login_request(request_payload)
+        is_valid, error_response = validate_fields(request_payload, ["username", "password"])
         if not is_valid:
             logging.warning(f"Invalid login request from {request.remote_addr}")
             return jsonify(error_response), 400
@@ -85,38 +93,43 @@ def login():
         logging.error(f"Error in login: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Gateway route to user service (for adding a user)
+# Gateway route: add user
 @app.route('/add_user', methods=['POST'])
 @rate_limiter
 def add_user():
     try:
-        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=request.json)
+        sanitized_body = sanitize_request_body(request.json)
+        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=sanitized_body)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in adding user: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
-# Other routes
+# Gateway route: delete user
 @app.route('/delete_user', methods=['DELETE'])
 @rate_limiter
 def delete_user():
     try:
-        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=request.json)
+        sanitized_body = sanitize_request_body(request.json)
+        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=sanitized_body)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in deleting user: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
+# Gateway route: create document
 @app.route('/documents', methods=['POST'])
 @rate_limiter
 def create_document():
     try:
-        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=request.json)
+        sanitized_body = sanitize_request_body(request.json)
+        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=sanitized_body)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in creating document: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
+# Gateway route: manage document
 @app.route('/documents/<document_id>', methods=['GET', 'PUT', 'DELETE'])
 @rate_limiter
 def manage_document(document_id):
@@ -126,26 +139,36 @@ def manage_document(document_id):
             "PUT": requests.put,
             "DELETE": requests.delete,
         }
+        sanitized_body = sanitize_request_body(request.json)
         response = method_map[request.method](
-            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request.json
+            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=sanitized_body
         )
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in managing document {document_id}: {e}")
         return jsonify({"error": "Service Unavailable"}), 503
 
+# Reset rate limit
 @app.route('/reset_rate_limit', methods=['POST'])
 def reset_rate_limit():
+    if not r:
+        return jsonify({"error": "Redis is unavailable"}), 503
     client_ip = request.remote_addr
     redis_key = f"rate_limit:{client_ip}"
     r.delete(redis_key)
     return jsonify({"message": "Rate limit reset for this IP"}), 200
 
 if __name__ == "__main__":
-    port = 5000
+    # Check for port as command-line argument
     if len(sys.argv) > 1:
         try:
             port = int(sys.argv[1])
         except ValueError:
-            print("Invalid port number, using default port 5000.")
-    app.run(port=port, debug=True)
+            print("Invalid port number provided. Falling back to default port 5000.")
+            port = 5000
+    else:
+        # Fallback to default port
+        port = int(os.getenv("PORT", 5000))  # Allow configurable port via environment variable
+
+    debug_mode = os.getenv("DEBUG", "True").lower() in ["true", "1"]
+    app.run(port=port, debug=debug_mode)
