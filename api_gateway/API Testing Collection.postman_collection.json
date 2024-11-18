@@ -76,7 +76,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxNjU5NzE1fQ.r4_GXYc0GpS4dGe09RrjKcXxfgf6YLKXgpy-RfEMYRs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzMxODE3NjIxfQ.sCSPeo2jSEmqg-4DDz4oicHAg5R38JwG9kz7svpLUEA",
 							"type": "string"
 						}
 					]
@@ -110,7 +110,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Retrieve the Document",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -134,7 +134,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"user_id\": \"testuser\",\n  \"text\": \"This is a sample document.\",\n  \"is_public\": false\n}\n",
+					"raw": "{\n  \"user_id\": \"testuser\",\n  \"text\": \"This is a sample document.\",\n  \"is_public\": true\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -142,7 +142,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5003/documents/6736fa5a8651021f2461eafd",
+					"raw": "http://127.0.0.1:5003/documents/67394b1a9c37071ecdbe2b19",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -153,7 +153,49 @@
 					"port": "5003",
 					"path": [
 						"documents",
-						"6736fa5a8651021f2461eafd"
+						"67394b1a9c37071ecdbe2b19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve the Updated Document",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/documents/673a9e6a0a6823ed31913744",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"documents",
+						"673a9e6a0a6823ed31913744"
 					]
 				}
 			},
