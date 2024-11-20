@@ -123,7 +123,7 @@ def delete_user():
 def create_document():
     try:
         sanitized_body = sanitize_request_body(request.json)
-        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=sanitized_body)
+        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=sanitized_body, headers=request.headers)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in creating document: {e}")
@@ -141,7 +141,7 @@ def manage_document(document_id):
         }
         sanitized_body = sanitize_request_body(request.json)
         response = method_map[request.method](
-            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=sanitized_body
+            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=sanitized_body, headers=request.headers
         )
         return jsonify(response.json()), response.status_code
     except Exception as e:

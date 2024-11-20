@@ -1,19 +1,37 @@
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from bson import ObjectId
+import jwt
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
 
 # MongoDB configuration
 client = MongoClient("mongodb://localhost:27017/")
 db = client['mydatabase']
 documents_collection = db['documents']
 
+def decode_token(token):
+    try:
+        decoded_data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
+        return decoded_data['username']  # Extract username
+    except jwt.ExpiredSignatureError:
+        return "Token has expired"
+    except jwt.InvalidTokenError:
+        return "Invalid token"
+
 @app.route('/documents', methods=['POST'])
 def create_document():
     data = request.json
+    auth_header = request.headers.get('Authorization')
+    if auth_header and auth_header.startswith("Bearer "):
+        token = auth_header.split(" ")[1]  # Split the string and take the second part
+    else:
+        print("Invalid or Missing Authorization Header")
+    username = decode_token(token)
+    #print(username)
     document = {
-        "user_id": data.get("user_id"),
+        "user_id": username,
         "text": data.get("text"),
         "is_public": data.get("is_public", True)  # Default to public if not provided
     }
@@ -39,8 +57,14 @@ def get_document(document_id):
 @app.route('/documents/<document_id>', methods=['PUT'])
 def update_document(document_id):
     data = request.json
+    auth_header = request.headers.get('Authorization')
+    if auth_header and auth_header.startswith("Bearer "):
+        token = auth_header.split(" ")[1]  # Split the string and take the second part
+    else:
+        print("Invalid or Missing Authorization Header")
+    username = decode_token(token)
     document = documents_collection.find_one({"_id": ObjectId(document_id)})
-    if document and document["user_id"] == data.get("user_id"):
+    if document and document["user_id"] == username:
         update_data = {
             "text": data.get("text", document["text"]),
             "is_public": data.get("is_public", document["is_public"])
@@ -52,8 +76,14 @@ def update_document(document_id):
 @app.route('/documents/<document_id>', methods=['DELETE'])
 def delete_document(document_id):
     data = request.json
+    auth_header = request.headers.get('Authorization')
+    if auth_header and auth_header.startswith("Bearer "):
+        token = auth_header.split(" ")[1]  # Split the string and take the second part
+    else:
+        print("Invalid or Missing Authorization Header")
+    username = decode_token(token)
     document = documents_collection.find_one({"_id": ObjectId(document_id)})
-    if document and document["user_id"] == data.get("user_id"):
+    if document and document["user_id"] == username:
         documents_collection.delete_one({"_id": ObjectId(document_id)})
         return jsonify({"message": "Document deleted"}), 200
     return jsonify({"error": "Unauthorized or document not found"}), 403
