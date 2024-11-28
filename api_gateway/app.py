@@ -119,6 +119,7 @@ def delete_user():
 
 # Gateway route: create document
 @app.route('/documents', methods=['POST'])
+@authenticate_request
 @rate_limiter
 def create_document():
     try:
@@ -132,6 +133,7 @@ def create_document():
 # Gateway route: manage document
 @app.route('/documents/<document_id>', methods=['GET', 'PUT', 'DELETE'])
 @rate_limiter
+@authenticate_request
 def manage_document(document_id):
     try:
         method_map = {
