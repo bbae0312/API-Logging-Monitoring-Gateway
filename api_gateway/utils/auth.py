@@ -1,4 +1,4 @@
-import jwt  # Import JWT library
+import jwt
 from functools import wraps
 from flask import request, jsonify
 
@@ -14,7 +14,7 @@ def authenticate_request(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# Validate JWT token.
+# Validate JWT token
 def is_token_valid(token):
     try:
         if token.startswith('Bearer '):

@@ -29,9 +29,10 @@ except redis.ConnectionError:
 
 # Helper function: sanitize sensitive fields
 def sanitize_request_body(body):
-    if body and "password" in body:
-        body["password"] = "********"  # Mask the password
-    return body
+    sanitized_body = body.copy()  # Create a copy of the request body
+    if "password" in sanitized_body:
+        sanitized_body["password"] = "********"  # Mask the password in the copy
+    return sanitized_body
 
 # Log request details
 @app.before_request
@@ -98,8 +99,7 @@ def login():
 @rate_limiter
 def add_user():
     try:
-        sanitized_body = sanitize_request_body(request.json)
-        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=sanitized_body)
+        response = requests.post(f"{USER_SERVICE_URL}/add_user", json=request.json)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in adding user: {e}")
@@ -110,8 +110,7 @@ def add_user():
 @rate_limiter
 def delete_user():
     try:
-        sanitized_body = sanitize_request_body(request.json)
-        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=sanitized_body)
+        response = requests.delete(f"{USER_SERVICE_URL}/delete_user", json=request.json)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in deleting user: {e}")
@@ -123,8 +122,7 @@ def delete_user():
 @rate_limiter
 def create_document():
     try:
-        sanitized_body = sanitize_request_body(request.json)
-        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=sanitized_body, headers=request.headers)
+        response = requests.post(f"{DOCUMENT_SERVICE_URL}/documents", json=request.json, headers=request.headers)
         return jsonify(response.json()), response.status_code
     except Exception as e:
         logging.error(f"Error in creating document: {e}")
@@ -141,9 +139,8 @@ def manage_document(document_id):
             "PUT": requests.put,
             "DELETE": requests.delete,
         }
-        sanitized_body = sanitize_request_body(request.json)
         response = method_map[request.method](
-            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=sanitized_body, headers=request.headers
+            f"{DOCUMENT_SERVICE_URL}/documents/{document_id}", json=request.json, headers=request.headers
         )
         return jsonify(response.json()), response.status_code
     except Exception as e:

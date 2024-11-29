@@ -863,3 +863,102 @@
 2024-11-27 21:56:51,392 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4999', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'a14fcd8b-74fa-4077-bd2b-3bc0b6a5619a', 'Content-Length': '45'}, 'body': {'username': 'testuser', 'password': '********'}}
 2024-11-27 21:56:51,721 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 200, 'duration': '0.33s'}
 2024-11-27 21:56:51,722 - INFO - 127.0.0.1 - - [27/Nov/2024 21:56:51] "POST /login HTTP/1.1" 200 -
+2024-11-28 19:36:35,624 - INFO - {'event': 'Incoming Request', 'endpoint': '/delete_user', 'method': 'DELETE', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:5000', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'c917cb75-47ab-4b6e-841b-bf36c0816fec', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-28 19:36:35,677 - INFO - {'event': 'Outgoing Response', 'endpoint': '/delete_user', 'method': 'DELETE', 'status_code': 200, 'duration': '0.05s'}
+2024-11-28 19:36:35,678 - INFO - 127.0.0.1 - - [28/Nov/2024 19:36:35] "DELETE /delete_user HTTP/1.1" 200 -
+2024-11-28 19:36:45,922 - INFO - {'event': 'Incoming Request', 'endpoint': '/add_user', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'f562f6d7-0139-4a19-ab4f-cf4cc268280b', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-28 19:36:46,184 - INFO - {'event': 'Outgoing Response', 'endpoint': '/add_user', 'method': 'POST', 'status_code': 201, 'duration': '0.26s'}
+2024-11-28 19:36:46,185 - INFO - 127.0.0.1 - - [28/Nov/2024 19:36:46] "[35m[1mPOST /add_user HTTP/1.1[0m" 201 -
+2024-11-28 19:49:22,150 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-28 19:49:22,150 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 19:49:22,151 - INFO -  * Restarting with stat
+2024-11-28 19:49:22,315 - WARNING -  * Debugger is active!
+2024-11-28 19:49:22,321 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:30:58,178 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+2024-11-29 15:30:58,182 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+2024-11-29 15:30:58,284 - INFO -  * Restarting with stat
+2024-11-29 15:30:58,296 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/services/user_service.py', reloading
+2024-11-29 15:30:58,319 - INFO -  * Restarting with stat
+2024-11-29 15:30:58,426 - INFO -  * Restarting with stat
+2024-11-29 15:30:58,718 - WARNING -  * Debugger is active!
+2024-11-29 15:30:58,721 - WARNING -  * Debugger is active!
+2024-11-29 15:30:58,725 - WARNING -  * Debugger is active!
+2024-11-29 15:30:58,726 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:30:58,728 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:30:58,730 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:31:23,842 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '01dc43fe-6161-405d-8c87-ecb0989f8188', 'Content-Length': '45'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:31:24,197 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 200, 'duration': '0.36s'}
+2024-11-29 15:31:24,198 - INFO - 127.0.0.1 - - [29/Nov/2024 15:31:24] "POST /login HTTP/1.1" 200 -
+2024-11-29 15:42:56,539 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:42:56,543 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:42:56,586 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:42:56,673 - INFO -  * Restarting with stat
+2024-11-29 15:42:56,672 - INFO -  * Restarting with stat
+2024-11-29 15:42:56,691 - INFO -  * Restarting with stat
+2024-11-29 15:42:57,035 - WARNING -  * Debugger is active!
+2024-11-29 15:42:57,040 - WARNING -  * Debugger is active!
+2024-11-29 15:42:57,045 - WARNING -  * Debugger is active!
+2024-11-29 15:42:57,053 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:42:57,054 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:42:57,056 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:43:12,537 - INFO - {'event': 'Incoming Request', 'endpoint': '/delete_user', 'method': 'DELETE', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '06609e38-0f1d-4b32-87fa-646297540f8c', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:43:12,564 - INFO - {'event': 'Outgoing Response', 'endpoint': '/delete_user', 'method': 'DELETE', 'status_code': 200, 'duration': '0.03s'}
+2024-11-29 15:43:12,565 - INFO - 127.0.0.1 - - [29/Nov/2024 15:43:12] "DELETE /delete_user HTTP/1.1" 200 -
+2024-11-29 15:43:21,196 - INFO - {'event': 'Incoming Request', 'endpoint': '/add_user', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4999', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'e69def92-225a-4df1-afe5-dbed67365547', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:43:21,571 - INFO - {'event': 'Outgoing Response', 'endpoint': '/add_user', 'method': 'POST', 'status_code': 201, 'duration': '0.38s'}
+2024-11-29 15:43:21,571 - INFO - 127.0.0.1 - - [29/Nov/2024 15:43:21] "[35m[1mPOST /add_user HTTP/1.1[0m" 201 -
+2024-11-29 15:43:24,977 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:5000', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '802adafd-2410-43dc-92ae-0de0a4e2cbd3', 'Content-Length': '45'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:43:25,310 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 200, 'duration': '0.33s'}
+2024-11-29 15:43:25,310 - INFO - 127.0.0.1 - - [29/Nov/2024 15:43:25] "POST /login HTTP/1.1" 200 -
+2024-11-29 15:44:00,472 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4998
+2024-11-29 15:44:00,473 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 15:44:00,473 - INFO -  * Restarting with stat
+2024-11-29 15:44:00,712 - WARNING -  * Debugger is active!
+2024-11-29 15:44:00,718 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:44:02,322 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4999
+2024-11-29 15:44:02,322 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 15:44:02,323 - INFO -  * Restarting with stat
+2024-11-29 15:44:02,558 - WARNING -  * Debugger is active!
+2024-11-29 15:44:02,564 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:44:03,784 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-29 15:44:03,784 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-29 15:44:03,790 - INFO -  * Restarting with stat
+2024-11-29 15:44:04,033 - WARNING -  * Debugger is active!
+2024-11-29 15:44:04,039 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:44:14,618 - INFO - {'event': 'Incoming Request', 'endpoint': '/delete_user', 'method': 'DELETE', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '01f4551f-79d1-47de-8e01-d9623172b2d1', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:44:14,650 - INFO - {'event': 'Outgoing Response', 'endpoint': '/delete_user', 'method': 'DELETE', 'status_code': 200, 'duration': '0.03s'}
+2024-11-29 15:44:14,650 - INFO - 127.0.0.1 - - [29/Nov/2024 15:44:14] "DELETE /delete_user HTTP/1.1" 200 -
+2024-11-29 15:44:23,450 - INFO - {'event': 'Incoming Request', 'endpoint': '/add_user', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4999', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '358a7357-9658-418d-bda3-48b571254c8a', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:44:23,781 - INFO - {'event': 'Outgoing Response', 'endpoint': '/add_user', 'method': 'POST', 'status_code': 201, 'duration': '0.33s'}
+2024-11-29 15:44:23,781 - INFO - 127.0.0.1 - - [29/Nov/2024 15:44:23] "[35m[1mPOST /add_user HTTP/1.1[0m" 201 -
+2024-11-29 15:44:43,869 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:5000', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '84b55ac4-de53-4f83-94c5-c5a92279a94e', 'Content-Length': '45'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:44:44,205 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 200, 'duration': '0.34s'}
+2024-11-29 15:44:44,205 - INFO - 127.0.0.1 - - [29/Nov/2024 15:44:44] "POST /login HTTP/1.1" 200 -
+2024-11-29 15:45:47,261 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:45:47,323 - INFO -  * Restarting with stat
+2024-11-29 15:45:47,470 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:45:47,540 - INFO -  * Restarting with stat
+2024-11-29 15:45:47,678 - WARNING -  * Debugger is active!
+2024-11-29 15:45:47,686 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:45:47,736 - INFO -  * Detected change in '/Users/jeffrey/API-Logging-Monitoring-Gateway/api_gateway/app.py', reloading
+2024-11-29 15:45:47,773 - WARNING -  * Debugger is active!
+2024-11-29 15:45:47,776 - INFO -  * Restarting with stat
+2024-11-29 15:45:47,778 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:45:48,003 - WARNING -  * Debugger is active!
+2024-11-29 15:45:48,009 - INFO -  * Debugger PIN: 989-386-005
+2024-11-29 15:46:01,536 - INFO - {'event': 'Incoming Request', 'endpoint': '/delete_user', 'method': 'DELETE', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'd553c3b7-af50-4aaf-9c31-afd92d748e42', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:46:01,549 - INFO - {'event': 'Outgoing Response', 'endpoint': '/delete_user', 'method': 'DELETE', 'status_code': 200, 'duration': '0.01s'}
+2024-11-29 15:46:01,549 - INFO - 127.0.0.1 - - [29/Nov/2024 15:46:01] "DELETE /delete_user HTTP/1.1" 200 -
+2024-11-29 15:46:10,346 - INFO - {'event': 'Incoming Request', 'endpoint': '/add_user', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4999', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': 'cdcc66a8-e631-4772-8fbc-3c8c426ee76d', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:46:10,680 - INFO - {'event': 'Outgoing Response', 'endpoint': '/add_user', 'method': 'POST', 'status_code': 201, 'duration': '0.33s'}
+2024-11-29 15:46:10,680 - INFO - 127.0.0.1 - - [29/Nov/2024 15:46:10] "[35m[1mPOST /add_user HTTP/1.1[0m" 201 -
+2024-11-29 15:46:13,918 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:5000', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '5e8f9d65-d33a-4382-868f-3144c98ac428', 'Content-Length': '45'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:46:14,252 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 401, 'duration': '0.33s'}
+2024-11-29 15:46:14,252 - INFO - 127.0.0.1 - - [29/Nov/2024 15:46:14] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2024-11-29 15:46:22,289 - INFO - {'event': 'Incoming Request', 'endpoint': '/login', 'method': 'POST', 'client_ip': '127.0.0.1', 'headers': {'Host': '127.0.0.1:4998', 'User-Agent': 'PostmanRuntime/7.42.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Postman-Token': '3a0c8954-b125-4516-9730-7e214648141e', 'Content-Length': '48'}, 'body': {'username': 'testuser', 'password': '********'}}
+2024-11-29 15:46:22,616 - INFO - {'event': 'Outgoing Response', 'endpoint': '/login', 'method': 'POST', 'status_code': 200, 'duration': '0.33s'}
+2024-11-29 15:46:22,617 - INFO - 127.0.0.1 - - [29/Nov/2024 15:46:22] "POST /login HTTP/1.1" 200 -

@@ -24,6 +24,8 @@ def generate_token(username):
 def login():
     data = request.json
     user = users_collection.find_one({"username": data.get("username")})
+    print(user)
+    print(data.get("password").encode('utf-8'))
 
     # Check if user exists and if password matches
     if user and bcrypt.checkpw(data.get("password").encode('utf-8'), user["password"]):
