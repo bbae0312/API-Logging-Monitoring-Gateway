@@ -10,6 +10,8 @@ from utils.rate_limit import rate_limiter
 from config import USER_SERVICE_URL, DOCUMENT_SERVICE_URL, LOG_FILE_PATH
 
 app = Flask(__name__)
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
 
 # Initialize logging
 logging.basicConfig(
@@ -27,17 +29,23 @@ except redis.ConnectionError:
     logging.error("Failed to connect to Redis. Ensure Redis is running on localhost:6379.")
     r = None  # Fallback if Redis is unavailable
 
-# Helper function: sanitize sensitive fields
+def sanitize_request_headers(headers):
+    sanitized_headers = dict(headers)
+    if 'Authorization' in sanitized_headers and sanitized_headers['Authorization'].startswith('Bearer'):
+        sanitized_headers['Authorization'] = 'Bearer ********'
+    return sanitized_headers
+
 def sanitize_request_body(body):
-    sanitized_body = body.copy()  # Create a copy of the request body
+    sanitized_body = body.copy()
     if "password" in sanitized_body:
-        sanitized_body["password"] = "********"  # Mask the password in the copy
+        sanitized_body["password"] = "********"
     return sanitized_body
 
 # Log request details
 @app.before_request
 def log_request_info():
     g.start_time = time.time()  # Track start time
+    sanitized_headers = sanitize_request_headers(request.headers)  # Mask Authorization header
     sanitized_body = sanitize_request_body(request.json)
     logging.info(
         {
@@ -45,7 +53,7 @@ def log_request_info():
             "endpoint": request.path,
             "method": request.method,
             "client_ip": request.remote_addr,
-            "headers": dict(request.headers),
+            "headers": sanitized_headers,
             "body": sanitized_body,
         }
     )
@@ -166,8 +174,5 @@ if __name__ == "__main__":
             print("Invalid port number provided. Falling back to default port 5000.")
             port = 5000
     else:
-        # Fallback to default port
-        port = int(os.getenv("PORT", 5000))  # Allow configurable port via environment variable
-
-    debug_mode = os.getenv("DEBUG", "True").lower() in ["true", "1"]
-    app.run(port=port, debug=debug_mode)
+        port = 5000
+    app.run(port=port, debug=False)
