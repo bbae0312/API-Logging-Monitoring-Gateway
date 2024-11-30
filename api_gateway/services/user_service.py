@@ -5,7 +5,7 @@ import jwt
 import datetime
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key'  # Set this to a strong secret key
+app.config['SECRET_KEY'] = 'secret_key'
 
 # MongoDB configuration
 client = MongoClient("mongodb://localhost:27017/")

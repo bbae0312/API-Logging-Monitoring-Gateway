@@ -2,7 +2,7 @@ import jwt
 from functools import wraps
 from flask import request, jsonify
 
-SECRET_KEY = 'your_secret_key'
+SECRET_KEY = 'secret_key'
 
 # Decorator to authenticate request
 def authenticate_request(f):
