@@ -11,7 +11,7 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client['mydatabase']
 documents_collection = db['documents']
 
-# Decode Token to get username
+# Helper function to decode token to get username
 def decode_token(token):
     try:
         decoded_data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=["HS256"])
@@ -25,6 +25,7 @@ def decode_token(token):
 @app.route('/documents', methods=['POST'])
 def create_document():
     data = request.json
+    # Get username based on JWT Token
     auth_header = request.headers.get('Authorization')
     if auth_header and auth_header.startswith("Bearer "):
         token = auth_header.split(" ")[1]
@@ -87,11 +88,6 @@ def delete_document(document_id):
         documents_collection.delete_one({"_id": ObjectId(document_id)})
         return jsonify({"message": "Document deleted"}), 200
     return jsonify({"error": "Unauthorized or document not found"}), 403
-
-# Status endpoint
-@app.route('/status', methods=['GET'])
-def status():
-    return jsonify({"status": "Document Service is running"}), 200
 
 if __name__ == "__main__":
     app.run(port=5003)

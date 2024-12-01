@@ -4,7 +4,6 @@ import time
 import logging
 import requests
 import redis
-import os
 from utils.auth import authenticate_request
 from utils.rate_limit import rate_limiter
 from config import USER_SERVICE_URL, DOCUMENT_SERVICE_URL, LOG_FILE_PATH
@@ -29,12 +28,14 @@ except redis.ConnectionError:
     logging.error("Failed to connect to Redis. Ensure Redis is running on localhost:6379.")
     r = None  # Fallback if Redis is unavailable
 
+# Mask token from being logged
 def sanitize_request_headers(headers):
     sanitized_headers = dict(headers)
     if 'Authorization' in sanitized_headers and sanitized_headers['Authorization'].startswith('Bearer'):
         sanitized_headers['Authorization'] = 'Bearer ********'
     return sanitized_headers
 
+# Mask password from being logged
 def sanitize_request_body(body):
     sanitized_body = body.copy()
     if "password" in sanitized_body:
@@ -58,6 +59,7 @@ def log_request_info():
         }
     )
 
+# Log response details
 @app.after_request
 def log_response_info(response):
     duration = time.time() - g.start_time
@@ -78,11 +80,6 @@ def validate_fields(data, required_fields):
     if missing_fields:
         return False, {"error": f"Missing fields: {', '.join(missing_fields)}"}
     return True, None
-
-# Default route
-@app.route('/')
-def index():
-    return jsonify({"message": "API Gateway is running"}), 200
 
 # Gateway route: login
 @app.route('/login', methods=['POST'])

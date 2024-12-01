@@ -20,6 +20,7 @@ def generate_token(username):
     }, app.config['SECRET_KEY'], algorithm="HS256")
     return token
 
+# Logs a user in and returns a generated token
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -33,13 +34,12 @@ def login():
         return jsonify({"message": "Login successful", "token": token}), 200
     return jsonify({"error": "Invalid credentials"}), 401
 
-# Endpoint to add a new user
+# Add a new user
 @app.route('/add_user', methods=['POST'])
 def add_user():
     new_user = request.json
     if users_collection.find_one({"username": new_user.get("username")}):
         return jsonify({"error": "User already exists"}), 400
-    
     hashed_password = bcrypt.hashpw(new_user.get("password").encode('utf-8'), bcrypt.gensalt())
     new_user_data = {
         "username": new_user.get("username"),
@@ -48,28 +48,20 @@ def add_user():
     users_collection.insert_one(new_user_data)
     return jsonify({"message": "User added successfully"}), 201
 
-# Endpoint to delete a user (for testing purposes)
+# Delete a user (testing purposes)
 @app.route('/delete_user', methods=['DELETE'])
 def delete_user():
     data = request.json
     username = data.get("username")
-
     # Ensure the username is provided
     if not username:
         return jsonify({"error": "Username is required"}), 400
-
     # Find and delete the user
     result = users_collection.delete_one({"username": username})
-
     if result.deleted_count > 0:
         return jsonify({"message": "User deleted successfully"}), 200
     else:
         return jsonify({"error": "User not found"}), 404
-
-# Status endpoint to check if the service is running
-@app.route('/status', methods=['GET'])
-def status():
-    return jsonify({"status": "User Service is running"}), 200
 
 if __name__ == "__main__":
     app.run(port=5001)

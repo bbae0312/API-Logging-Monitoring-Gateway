@@ -14,7 +14,7 @@ def authenticate_request(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# Validate JWT token
+# Helper function to validate JWT token
 def is_token_valid(token):
     try:
         if token.startswith('Bearer '):

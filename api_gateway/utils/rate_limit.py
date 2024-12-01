@@ -11,8 +11,8 @@ except redis.ConnectionError:
     print("Failed to connect to Redis for rate limiting. Ensure Redis is running on localhost:6379.")
 
 # Rate limit settings
-MAX_REQUESTS = 20
-TIME_WINDOW = 300
+MAX_REQUESTS = 20 # no. of requests
+TIME_WINDOW = 300 # seconds = 5 minutes
 
 # Decorator for rate limiting
 def rate_limiter(f):

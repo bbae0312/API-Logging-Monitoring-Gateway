@@ -13,10 +13,10 @@ app = Flask(__name__)
 @app.route("/", defaults={"path": ""}, methods=["GET", "POST", "PUT", "DELETE"])
 @app.route("/<path:path>", methods=["GET", "POST", "PUT", "DELETE"])
 def load_balancer(path):
+    # Try all three instances in case certain instances are unavailable/times out
     for i in range(len(INSTANCES)):
         target_instance = next(instance_cycle)
         target_url = f"{target_instance}/{path}"
-
         try:
             response = requests.request(
                 method=request.method,
