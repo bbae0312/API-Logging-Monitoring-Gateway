@@ -1,0 +1,6 @@
+Flask
+requests
+redis
+PyJWT
+pymongo
+bcrypt
